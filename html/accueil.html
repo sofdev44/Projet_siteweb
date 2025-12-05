@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil — Pôle Informatique EFREI</title>
+    <!-- Chargement de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'eefrei-dark': '#0f172a',   /* Bleu très sombre (Fond) */
+                        'eefrei-blue': '#003366',   /* Bleu institutionnel */
+                        'eefrei-light': '#3b82f6',  /* Bleu plus vif pour les boutons/liens */
+                        'eefrei-sky': '#e0f2fe',    /* Bleu très pâle pour les fonds de section */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .card-zoom:hover .card-img {
+            transform: scale(1.05);
+        }
+        .card-img {
+            transition: transform 0.5s ease;
+        }
+        /* Effet de verre pour le header */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- 1. HEADER AVEC LOGO -->
+    <header class="glass-nav shadow-md sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- LOGO À GAUCHE (Espace Image) -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <!-- REMPLACER src PAR VOTRE LOGO (ex: 'images/logo.png') -->
+                        <img class="h-12 w-auto object-contain" 
+                             src="https://placehold.co/150x50/transparent/003366?text=LOGO+ICI" 
+                             alt="Logo EFREI">
+                        
+                        <!-- Texte optionnel à côté du logo -->
+                        <div class="hidden md:block leading-tight">
+                            <span class="block text-lg font-bold text-eefrei-blue uppercase tracking-wide">Pôle Info</span>
+                            <span class="block text-xs text-gray-500 font-medium">EFREI Paris</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- NAVIGATION -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-eefrei-blue font-bold border-b-2 border-eefrei-light pb-1">Accueil</a>
+                    <a href="presentation.html" class="text-gray-600 hover:text-eefrei-light font-medium transition">Présentation</a>
+                    <a href="enseignement.html" class="text-gray-600 hover:text-eefrei-light font-medium transition">Enseignement</a>
+                    <a href="projets.html" class="text-gray-600 hover:text-eefrei-light font-medium transition">Projets</a>
+                    <a href="vie.html" class="text-gray-600 hover:text-eefrei-light font-medium transition">Vie étudiante</a>
+                    <a href="contact.html" class="px-4 py-2 rounded-full bg-eefrei-blue text-white font-medium hover:bg-eefrei-light transition shadow-md">Contact</a>
+                </nav>
+
+                <!-- BOUTON MOBILE -->
+                <div class="md:hidden">
+                    <button id="menu-button" class="text-eefrei-blue p-2">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- MENU MOBILE -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block py-2 text-eefrei-blue font-bold">Accueil</a>
+                <a href="presentation.html" class="block py-2 text-gray-600">Présentation</a>
+                <a href="enseignement.html" class="block py-2 text-gray-600">Enseignement</a>
+                <a href="projets.html" class="block py-2 text-gray-600">Projets</a>
+                <a href="vie.html" class="block py-2 text-gray-600">Vie étudiante</a>
+                <a href="contact.html" class="block py-2 text-eefrei-light font-semibold">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. SECTION HÉRO AVEC BACKGROUND IMAGE -->
+        <!-- Cette section utilise une image de fond sombre pour faire ressortir le texte blanc -->
+        <div class="relative h-[600px] flex items-center justify-center overflow-hidden bg-eefrei-dark">
+            
+            <!-- IMAGE DE FOND (À remplacer) -->
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover opacity-40" 
+                     src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
+                     alt="Background Code et Technologie">
+                <!-- Overlay dégradé bleu pour la lisibilité -->
+                <div class="absolute inset-0 bg-gradient-to-t from-eefrei-blue/90 via-eefrei-blue/50 to-transparent"></div>
+            </div>
+
+            <!-- CONTENU TEXTE -->
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg tracking-tight">
+                    L'Excellence du Numérique
+                </h1>
+                <p class="text-lg md:text-2xl text-gray-200 mb-10 font-light leading-relaxed">
+                    Rejoignez le Pôle Informatique de l'EFREI. <br class="hidden md:block">
+                    Formations d'experts, innovations et vie associative intense.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <!-- Bouton Principal (Bleu clair) -->
+                    <a href="presentation.html" class="px-8 py-4 rounded-lg bg-eefrei-light text-white font-bold text-lg hover:bg-white hover:text-eefrei-blue transition duration-300 shadow-lg border border-transparent">
+                        Découvrir le Pôle
+                    </a>
+                    <!-- Bouton Secondaire (Transparent bordure blanche) -->
+                    <a href="enseignement.html" class="px-8 py-4 rounded-lg bg-transparent border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-eefrei-blue transition duration-300">
+                        Nos Formations
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. SECTION "NOS PILIERS" (CARTES) -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-eefrei-blue uppercase tracking-wider mb-3">Au cœur de notre action</h2>
+                    <div class="w-24 h-1 bg-eefrei-light mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    
+                    <!-- Carte 1 -->
+                    <div class="card-zoom group bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                        <div class="h-56 overflow-hidden relative">
+                            <!-- ESPACE IMAGE 1 -->
+                            <img class="card-img w-full h-full object-cover" 
+                                 src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Conférence enseignement">
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition"></div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-eefrei-blue mb-3">Enseignement</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Des cursus adaptés aux réalités du marché : IA, Big Data, Cybersécurité et développement logiciel.
+                            </p>
+                            <a href="enseignement.html" class="inline-flex items-center text-eefrei-light font-bold hover:text-eefrei-blue transition">
+                                Voir le programme <span class="ml-2">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Carte 2 -->
+                    <div class="card-zoom group bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                        <div class="h-56 overflow-hidden relative">
+                            <!-- ESPACE IMAGE 2 -->
+                            <img class="card-img w-full h-full object-cover" 
+                                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Travail de groupe projet">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-eefrei-blue mb-3">Projets & R&D</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                L'apprentissage par la pratique : participez à des projets innovants et des compétitions techniques.
+                            </p>
+                            <a href="projets.html" class="inline-flex items-center text-eefrei-light font-bold hover:text-eefrei-blue transition">
+                                Nos projets <span class="ml-2">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Carte 3 -->
+                    <div class="card-zoom group bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                        <div class="h-56 overflow-hidden relative">
+                            <!-- ESPACE IMAGE 3 -->
+                            <img class="card-img w-full h-full object-cover" 
+                                 src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Vie étudiante campus">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-eefrei-blue mb-3">Vie Étudiante</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Une ambiance unique sur le campus avec nos associations et événements tout au long de l'année.
+                            </p>
+                            <a href="vie.html" class="inline-flex items-center text-eefrei-light font-bold hover:text-eefrei-blue transition">
+                                La vie à l'EFREI <span class="ml-2">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION "REJOIGNEZ-NOUS" (Fond Bleu Ciel très léger) -->
+        <section class="py-16 bg-eefrei-sky">
+            <div class="max-w-5xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-eefrei-blue mb-6">Prêt à construire votre avenir ?</h2>
+                <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                    Le pôle informatique vous ouvre ses portes. N'hésitez pas à nous contacter pour plus d'informations sur les admissions ou les partenariats.
+                </p>
+                <a href="contact.html" class="inline-block px-10 py-4 bg-eefrei-blue text-white font-bold rounded-lg shadow-lg hover:bg-blue-900 transform hover:-translate-y-1 transition duration-300">
+                    Nous Contacter
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SIMPLE -->
+    <footer class="bg-eefrei-blue text-white border-t border-blue-800">
+        <div class="max-w-7xl mx-auto px-4 py-8 sm:flex sm:justify-between sm:items-center">
+            <div class="mb-4 sm:mb-0">
+                <span class="text-lg font-bold">Pôle Informatique EFREI</span>
+                <p class="text-sm text-blue-200 mt-1">Villejuif, France</p>
+            </div>
+            <div class="flex space-x-6 text-sm">
+                <a href="#" class="hover:text-eefrei-light transition">Mentions légales</a>
+                <a href="contact.html" class="hover:text-eefrei-light transition">Contact</a>
+            </div>
+            <div class="mt-4 sm:mt-0 text-sm text-blue-300">
+                &copy; 2025 Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script simple pour le menu mobile
+        const btn = document.getElementById('menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
