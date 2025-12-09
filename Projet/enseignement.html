@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Enseignement — EFREI</title>
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'eefrei-dark': '#0f172a',
+                        'eefrei-blue': '#003366',
+                        'eefrei-light': '#3b82f6',
+                        'eefrei-sky': '#e0f2fe',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+ <!-- HEADER -->
+    <header class="header-sticky glass-nav">
+        <div class="container">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- LOGO À GAUCHE (Votre image locale) -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <a href="accueil.html" class="flex items-center gap-2">
+                        <!-- J'ai gardé votre lien vers le logo -->
+                        <img class="h-12 w-auto object-contain" src="../Projet/img/logoefrei.png" alt="Logo EFREI">
+                        
+                        <div class="hidden md:block leading-tight">
+                            <span class="block text-lg font-bold text-eefrei-blue uppercase tracking-wide">Pôle Informatique</span>
+                            <span class="block text-xs text-gray-500 font-medium">EFREI Paris</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- NAVIGATION -->
+                <nav class="hidden md:flex space-x-8 main-nav">
+                    <a href="accueil.html" class="active text-eefrei-blue font-bold border-b-2 border-eefrei-light pb-1">Accueil</a>
+                    <a href="presentation.html" class="text-gray-600 font-medium">Présentation</a>
+                    <a href="enseignement.html" class="text-gray-600 font-medium">Enseignement</a>
+                    <a href="projets.html" class="text-gray-600 font-medium">Projets</a>
+                    <a href="vieetudiante.html" class="text-gray-600 font-medium">Vie étudiante</a>
+                    <a href="contact.html" class="btn btn-primary shadow-md hover:bg-eefrei-dark px-4 py-2">Contact</a>
+                    <a href="apropos.html" class="btn btn-primary shadow-md hover:bg-eefrei-dark px-4 py-2">À Propos</a>
+                </nav>
+
+                <!-- BOUTON MOBILE -->
+                <div class="md:hidden">
+                    <button id="menu-button" class="text-eefrei-blue p-2">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- MENU MOBILE -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="accueil.html" class="block py-2 text-eefrei-blue font-bold">Accueil</a>
+                <a href="presentation.html" class="block py-2 text-gray-600">Présentation</a>
+                <a href="enseignement.html" class="block py-2 text-gray-600">Enseignement</a>
+                <a href="projets.html" class="block py-2 text-gray-600">Projets</a>
+                <a href="vieetudiante.html" class="block py-2 text-gray-600">Vie étudiante</a>
+                <a href="contact.html" class="block py-2 text-eefrei-light font-semibold">Contact</a>
+                <a href="apropos.html" class="block py-2 text-eefrei-light font-semibold">À Propos</a>
+            </div>
+        </div>
+    </header>
+
+
+<main>
+<h2>Formation et modules</h2>
+<ul>
+<li>Génie logiciel : POO, architectures, design patterns.</li>
+<li>Cybersécurité : systèmes, cryptographie, tests d’intrusion.</li>
+<li>IA & Data Science : machine learning, deep learning, data mining.</li>
+<li>Cloud et DevOps : CI/CD, conteneurs, infrastructures cloud.</li>
+</ul>
+</main>
+</body>
+</html>

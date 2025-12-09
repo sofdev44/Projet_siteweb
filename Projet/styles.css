@@ -1,0 +1,158 @@
+/* -------------------------------------------------------------------------- */
+/* 1. FONDATIONS                               */
+/* -------------------------------------------------------------------------- */
+
+/* Import de la police Inter et des couleurs Tailwind personnalisées (pour référence) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+/* Réinitialisation de base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Couleurs définies dans Tailwind Config (pour référence visuelle) */
+    --color-dark: #0f172a;       /* eefrei-dark */
+    --color-blue: #003366;       /* eefrei-blue (Institutionnel) */
+    --color-light-blue: #3b82f6; /* eefrei-light (Accent) */
+    --color-sky: #e0f2fe;        /* eefrei-sky (Fond pâle) */
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    line-height: 1.6;
+    background-color: #f9fafb; /* Très léger gris */
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 2. UTILITAIRES                              */
+/* -------------------------------------------------------------------------- */
+
+/* Conteneur Centré */
+.container {
+    width: 100%;
+    max-width: 1280px; /* max-w-7xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-light-blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-blue);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.2);
+}
+
+.btn-outline-white {
+    border-color: white;
+    color: white;
+    background-color: transparent;
+}
+
+.btn-outline-white:hover {
+    background-color: white;
+    color: var(--color-blue);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 3. HEADER                                 */
+/* -------------------------------------------------------------------------- */
+
+.header-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Effet de verre pour la barre de navigation (Gardé de la version précédente) */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+}
+
+/* Liens de navigation */
+.main-nav a {
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--color-light-blue);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4. CARTES                                 */
+/* -------------------------------------------------------------------------- */
+
+.card {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* Effet de zoom sur les images des cartes (Gardé de la version précédente) */
+.card-zoom:hover .card-img {
+    transform: scale(1.05);
+}
+
+.card-img {
+    transition: transform 0.5s ease;
+}
+
+/* Lien "En savoir plus" */
+.card-link {
+    color: var(--color-light-blue);
+    font-weight: 600;
+}
+
+.card-link:hover {
+    color: var(--color-blue);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 5. FOOTER                                 */
+/* -------------------------------------------------------------------------- */
+
+footer {
+    background-color: var(--color-blue);
+    color: white;
+    padding-top: 2rem;
+}
+
+footer a {
+    color: #93c5fd; /* blue-300 */
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: white;
+}
