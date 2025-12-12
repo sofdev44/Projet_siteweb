@@ -24,15 +24,12 @@
     </script>
 </head>
 <body>
- <!-- HEADER -->
-    <header class="header-sticky glass-nav">
+ <header class="header-sticky glass-nav">
         <div class="container">
             <div class="flex justify-between items-center h-20">
                 
-                <!-- LOGO À GAUCHE (Votre image locale) -->
                 <div class="flex-shrink-0 flex items-center gap-3">
                     <a href="accueil.html" class="flex items-center gap-2">
-                        <!-- J'ai gardé votre lien vers le logo -->
                         <img class="h-12 w-auto object-contain" src="../Projet/img/logoefrei.png" alt="Logo EFREI">
                         
                         <div class="hidden md:block leading-tight">
@@ -42,18 +39,16 @@
                     </a>
                 </div>
 
-                <!-- NAVIGATION -->
                 <nav class="hidden md:flex space-x-8 main-nav">
-                    <a href="accueil.html" class="active text-eefrei-blue font-bold border-b-2 border-eefrei-light pb-1">Accueil</a>
+                    <a href="accueil.html" class="text-gray-600 font-medium">Accueil</a>
                     <a href="presentation.html" class="text-gray-600 font-medium">Présentation</a>
                     <a href="enseignement.html" class="text-gray-600 font-medium">Enseignement</a>
-                    <a href="projets.html" class="text-gray-600 font-medium">Projets</a>
+                    <a href="projets.html" class="active text-eefrei-blue font-bold border-b-2 border-eefrei-light pb-1">Projets</a>
                     <a href="vieetudiante.html" class="text-gray-600 font-medium">Vie étudiante</a>
                     <a href="contact.html" class="btn btn-primary shadow-md hover:bg-eefrei-dark px-4 py-2">Contact</a>
                     <a href="apropos.html" class="btn btn-primary shadow-md hover:bg-eefrei-dark px-4 py-2">À Propos</a>
                 </nav>
 
-                <!-- BOUTON MOBILE -->
                 <div class="md:hidden">
                     <button id="menu-button" class="text-eefrei-blue p-2">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -61,13 +56,12 @@
                 </div>
             </div>
         </div>
-        <!-- MENU MOBILE -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
             <div class="px-4 pt-2 pb-4 space-y-1">
                 <a href="accueil.html" class="block py-2 text-eefrei-blue font-bold">Accueil</a>
                 <a href="presentation.html" class="block py-2 text-gray-600">Présentation</a>
                 <a href="enseignement.html" class="block py-2 text-gray-600">Enseignement</a>
-                <a href="projets.html" class="block py-2 text-gray-600">Projets</a>
+                <a href="projets.html" class="block py-2 text-eefrei-blue font-bold">Projets</a>
                 <a href="vieetudiante.html" class="block py-2 text-gray-600">Vie étudiante</a>
                 <a href="contact.html" class="block py-2 text-eefrei-light font-semibold">Contact</a>
                 <a href="apropos.html" class="block py-2 text-eefrei-light font-semibold">À Propos</a>
@@ -75,20 +69,56 @@
         </div>
     </header>
 
-<main>
-<h2>Exemples de projets réalisés</h2>
+<main class="py-12">
+    <div class="container mx-auto px-4">
+        
+        <section class="bg-eefrei-sky p-8 rounded-xl">
+            <h1 class="text-4xl font-extrabold text-eefrei-dark mb-8 text-center border-b-2 border-eefrei-dark pb-2">Projets de Recherche & Doctorats</h1>
+            <p class="text-lg text-gray-700 mb-10 text-center max-w-4xl mx-auto">
+                Le laboratoire de l'EFREI (EFREI Research Lab), en lien avec l'Université Paris-Panthéon-Assas, mène une recherche numérique responsable, éthique et pluridisciplinaire, axée sur trois axes majeurs.
+            </p>
 
+            <div class="space-y-10">
+                
+                <div class="border-l-4 border-eefrei-blue pl-4">
+                    <h3 class="text-2xl font-bold text-eefrei-blue mb-3">1. Sécurité, Résilience & Confiance numérique</h3>
+                    <ul class="list-disc ml-6 space-y-2 text-gray-700">
+                        <li><strong>Objectif :</strong> Concilier innovation et cybersécurité pour un numérique de confiance.</li>
+                        <li><strong>Expertise :</strong> L'EFREI, membre du Campus Cyber, est à la pointe, notamment avec des chercheuses comme <strong>Fériel Bouakkaz</strong> (Instructrice Certified Ethical Hacker).</li>
+                        <li><strong>Domaine :</strong> Cryptographie, sécurité des systèmes, résilience.</li>
+                    </ul>
+                </div>
+                
+                <div class="border-l-4 border-eefrei-blue pl-4">
+                    <h3 class="text-2xl font-bold text-eefrei-blue mb-3">2. Réseaux de communication : De la 5G à la 6G</h3>
+                    <ul class="list-disc ml-6 space-y-2 text-gray-700">
+                        <li><strong>Objectif :</strong> Construire l'internet du futur en explorant les technologies de communication avancées.</li>
+                        <li><strong>Thèse en cours :</strong> Des doctorants travaillent sur l'Integrated Sensing and Communication.</li>
+                        <li><strong>Domaine :</strong> Télécommunications, réseaux nouvelle génération, infrastructures.</li>
+                    </ul>
+                </div>
+                
+                <div class="border-l-4 border-eefrei-blue pl-4">
+                    <h3 class="text-2xl font-bold text-eefrei-blue mb-3">3. Systèmes embarqués intelligents et environnements connectés</h3>
+                    <ul class="list-disc ml-6 space-y-2 text-gray-700">
+                        <li><strong>Objectif :</strong> Donner vie aux objets connectés et aux environnements intelligents.</li>
+                        <li><strong>Domaine :</strong> IoT, systèmes robotiques, capteurs, efficacité énergétique logicielle.</li>
+                    </ul>
+                </div>
 
-<h3>Projet IA : Analyse d'images</h3>
-<p>Création d’un modèle CNN entraîné sur un dataset personnalisé.</p>
+                <div class="border-t pt-6">
+                    <h3 class="text-2xl font-bold text-eefrei-dark mb-3 flex items-center gap-2">
+                        💡 Focus Doctorat : LegalTech et Blockchain
+                    </h3>
+                    <p class="text-gray-700 pl-4">
+                        Un projet de la <strong>PhD Box</strong> explore l'utilisation de la <strong>Blockchain</strong> et de l'<strong>Intelligence Artificielle</strong> pour la résolution des litiges. Ce projet illustre la recherche pluridisciplinaire menée à l'intersection du numérique et du droit (en lien avec Paris-Panthéon-Assas).
+                    </p>
+                </div>
 
-
-<h3>Projet Cybersécurité : CTF</h3>
-<p>Résolution d’épreuves pratiques, exploitation de failles, forensics.</p>
-
-
-<h3>Projet IoT : Monitoring intelligent</h3>
-<p>Développement d’une plateforme de collecte et visualisation de données.</p>
+            </div>
+        </section>
+        
+    </div>
 </main>
 </body>
 </html>
