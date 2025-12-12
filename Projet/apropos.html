@@ -5,23 +5,8 @@
 <title>À propos — EFREI</title>
 <link rel="stylesheet" href="styles.css" />
 <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'eefrei-dark': '#0f172a',
-                        'eefrei-blue': '#003366',
-                        'eefrei-light': '#3b82f6',
-                        'eefrei-sky': '#e0f2fe',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+<script src="script.js"></script>
+   
 </head>
 <body>
  <!-- HEADER -->
@@ -78,8 +63,15 @@
 
 
 <main>
-<h2>À propos du pôle</h2>
-<p>Le Pôle Informatique de l’EFREI vise l’excellence académique et technologique en formant les ingénieurs de demain.</p>
+<!-- SECTION HERO (Titre) -->
+        <section class="bg-eefrei-blue py-16">
+            <div class="container text-center">
+                <h1 class="text-4xl font-extrabold text-white mb-4">Notre Histoire & Nos Valeurs</h1>
+                <p class="text-blue-200 text-lg max-w-2xl mx-auto">
+                    Depuis sa création, le Pôle Informatique de l'EFREI forme les leaders du numérique en alliant excellence technique et savoir-être.
+                </p>
+            </div>
+        </section>
 </main>
 </body>
 </html>

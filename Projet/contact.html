@@ -5,23 +5,7 @@
 <title>Contact — EFREI</title>
 <link rel="stylesheet" href="styles.css" />
 <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'eefrei-dark': '#0f172a',
-                        'eefrei-blue': '#003366',
-                        'eefrei-light': '#3b82f6',
-                        'eefrei-sky': '#e0f2fe',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+<script src="script.js"></script>
 </head>
 <body>
  <!-- HEADER -->
@@ -29,10 +13,10 @@
         <div class="container">
             <div class="flex justify-between items-center h-20">
                 
-                <!-- LOGO À GAUCHE (Votre image locale) -->
+                <!-- LOGO À GAUCHE  -->
                 <div class="flex-shrink-0 flex items-center gap-3">
                     <a href="accueil.html" class="flex items-center gap-2">
-                        <!-- J'ai gardé votre lien vers le logo -->
+                        <!-- logo image  -->
                         <img class="h-12 w-auto object-contain" src="../Projet/img/logoefrei.png" alt="Logo EFREI">
                         
                         <div class="hidden md:block leading-tight">
@@ -74,11 +58,214 @@
             </div>
         </div>
     </header>
+ 
+    <main>
+        <!-- SECTION HERO (TITRE) -->
+        <section class="bg-eefrei-blue py-16">
+            <div class="container text-center">
+                <h1 class="text-4xl font-extrabold text-white mb-4">Contact & Admissions</h1>
+                <p class="text-blue-200 text-lg max-w-2xl mx-auto">
+                    Une question sur nos programmes ou la procédure d'inscription ? Nous sommes là pour vous répondre.
+                </p>
+            </div>
+        </section>
 
-<main>
-<h2>Formulaire de contact</h2>
-<p>Email : contact@efrei.fr</p>
-<p>Adresse : 94 Av. du Général Leclerc, 94270 KB</p>
-</main>
+        <!-- SECTION 1 : COORDONNÉES ET PLAN D'ACCÈS -->
+        <section class="py-16 bg-white">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <!-- INFO CONTACT -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-eefrei-blue mb-8">Nous trouver</h2>
+                        
+                        <div class="space-y-6">
+                            <!-- Adresse -->
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-eefrei-sky rounded-full flex items-center justify-center text-eefrei-blue text-xl mr-4">
+                                    📍
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-eefrei-dark">Campus EFREI</h3>
+                                    <p class="text-gray-600">30-32 Avenue de la République<br>94800 Villejuif, France</p>
+                                </div>
+                            </div>
+
+                            <!-- Téléphone -->
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-eefrei-sky rounded-full flex items-center justify-center text-eefrei-blue text-xl mr-4">
+                                    📞
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-eefrei-dark">Téléphone</h3>
+                                    <p class="text-gray-600 text-lg font-medium">+33 (0)1 46 77 46 77</p>
+                                    <p class="text-sm text-gray-500">Du lundi au vendredi, 8h30 - 18h00</p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-eefrei-sky rounded-full flex items-center justify-center text-eefrei-blue text-xl mr-4">
+                                    📧
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-eefrei-dark">Email Admissions</h3>
+                                    <a href="mailto:admission@efrei.fr" class="text-eefrei-light font-medium hover:underline">admission@efrei.fr</a>
+                                </div>
+                            </div>
+
+                            <!-- Transports -->
+                            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 mt-8">
+                                <h3 class="text-lg font-bold text-eefrei-blue mb-3">Accès Transports</h3>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center">
+                                        <span class="bg-pink-400 text-white font-bold px-2 py-1 rounded text-xs mr-3">M7</span>
+                                        <span class="text-gray-700">Métro Ligne 7 - Arrêt <strong>Villejuif Louis Aragon</strong></span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="bg-red-800 text-white font-bold px-2 py-1 rounded text-xs mr-3">M15</span>
+                                        <span class="text-gray-700">Métro Ligne 15 (Grand Paris Express) - À venir</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="bg-gray-400 text-white font-bold px-2 py-1 rounded text-xs mr-3">T7</span>
+                                        <span class="text-gray-700">Tramway T7</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARTE INTERACTIVE -->
+                    <div class="h-full min-h-[400px] rounded-xl overflow-hidden shadow-lg border border-gray-200 relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.647367672223!2d2.361494315671853!3d48.78862997928062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e673e24e04a9c3%3A0xc55cb3e676f95321!2sEFREI%20Paris!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 : PROCÉDURE D'ADMISSION -->
+        <section class="py-16 bg-gray-50">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-eefrei-blue mb-4">Rejoindre le Pôle Informatique</h2>
+                    <p class="text-gray-500 max-w-2xl mx-auto">Trois voies principales pour intégrer nos formations d'excellence.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Carte 1 : Post-Bac -->
+                    <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-eefrei-light hover:shadow-xl transition duration-300">
+                        <div class="text-4xl mb-4">🎓</div>
+                        <h3 class="text-xl font-bold text-eefrei-blue mb-3">Post-Bac</h3>
+                        <p class="text-sm font-semibold text-eefrei-light mb-4 uppercase tracking-wide">Via Parcoursup</p>
+                        <p class="text-gray-600 mb-4">
+                            L'admission en 1ère année se fait via le <strong>Concours Puissance Alpha</strong>.
+                        </p>
+                        <ul class="text-sm text-gray-500 list-disc pl-5 space-y-1">
+                            <li>Inscription sur Parcoursup</li>
+                            <li>Étude du dossier scolaire</li>
+                            <li>Épreuves écrites (Avril/Mai)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Carte 2 : Admissions Parallèles -->
+                    <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-eefrei-blue hover:shadow-xl transition duration-300">
+                        <div class="text-4xl mb-4">🚀</div>
+                        <h3 class="text-xl font-bold text-eefrei-blue mb-3">Bac+2 / Bac+3</h3>
+                        <p class="text-sm font-semibold text-eefrei-light mb-4 uppercase tracking-wide">Admissions Parallèles</p>
+                        <p class="text-gray-600 mb-4">
+                            Pour les titulaires d'un BUT, BTS, Licence ou Prépa scientifique souhaitant rejoindre le cycle Ingénieur.
+                        </p>
+                        <ul class="text-sm text-gray-500 list-disc pl-5 space-y-1">
+                            <li>Candidature en ligne</li>
+                            <li>Analyse du dossier académique</li>
+                            <li>Entretien de motivation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Carte 3 : Prépas CPGE -->
+                    <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-eefrei-light hover:shadow-xl transition duration-300">
+                        <div class="text-4xl mb-4">🧠</div>
+                        <h3 class="text-xl font-bold text-eefrei-blue mb-3">CPGE</h3>
+                        <p class="text-sm font-semibold text-eefrei-light mb-4 uppercase tracking-wide">Concours CPGE</p>
+                        <p class="text-gray-600 mb-4">
+                            Accès dédié aux étudiants issus des Classes Préparatoires aux Grandes Écoles.
+                        </p>
+                        <ul class="text-sm text-gray-500 list-disc pl-5 space-y-1">
+                            <li>Banque d'épreuves E3A-Polytech</li>
+                            <li>Classement national</li>
+                            <li>Intégration directe en cycle Ingénieur</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 : FAQ -->
+        <section class="py-16 bg-white">
+            <div class="container max-w-4xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-eefrei-blue mb-4">Questions Fréquentes (FAQ)</h2>
+                </div>
+
+                <div class="space-y-6">
+                    
+                    <!-- Question 1 -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:border-eefrei-light transition duration-300">
+                        <h3 class="text-lg font-bold text-eefrei-blue mb-2">Quel est le coût de la scolarité ?</h3>
+                        <p class="text-gray-600">
+                            Les frais de scolarité varient selon le cycle (Bachelor ou Ingénieur). Comptez environ 9 000€ à 10 000€ par an pour le cycle initial. L'alternance (possible dès la 3ème année) permet la prise en charge totale des frais par l'entreprise.
+                        </p>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:border-eefrei-light transition duration-300">
+                        <h3 class="text-lg font-bold text-eefrei-blue mb-2">Comment se déroule la vie sur le campus ?</h3>
+                        <p class="text-gray-600">
+                            Le campus de Villejuif est très dynamique avec plus de 60 associations étudiantes (sport, humanitaire, tech, culture). Les jeudis après-midi sont souvent banalisés pour les activités associatives.
+                        </p>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:border-eefrei-light transition duration-300">
+                        <h3 class="text-lg font-bold text-eefrei-blue mb-2">Quels sont les pré-requis informatiques ?</h3>
+                        <p class="text-gray-600">
+                            Aucun pré-requis strict en programmation n'est exigé pour l'entrée en 1ère année de Bachelor ou de Prépa intégrée. La motivation et un esprit logique sont les clés de la réussite. Des cours de remise à niveau sont proposés pour les admissions parallèles.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-eefrei-blue text-white">
+        <div class="container py-8 sm:flex sm:justify-between sm:items-center">
+            <div class="mb-4 sm:mb-0">
+                <span class="text-lg font-bold">Pôle Informatique EFREI</span>
+                <p class="text-sm text-blue-200 mt-1">Villejuif, France</p>
+            </div>
+            <div class="flex space-x-6 text-sm">
+                <a href="#" class="hover:text-eefrei-light transition">Mentions légales</a>
+                <a href="contact.html" class="hover:text-eefrei-light transition">Contact</a>
+                 <a href="apropos.html" class="hover:text-eefrei-light transition">À Propos</a>
+            </div>
+            <div class="mt-4 sm:mt-0 text-sm text-blue-300">
+                &copy; 2025 Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

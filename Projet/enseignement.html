@@ -1,30 +1,17 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<title>Enseignement — EFREI</title>
-<link rel="stylesheet" href="styles.css" />
-<script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'eefrei-dark': '#0f172a',
-                        'eefrei-blue': '#003366',
-                        'eefrei-light': '#3b82f6',
-                        'eefrei-sky': '#e0f2fe',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enseignement — Pôle Informatique EFREI</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
 </head>
-<body>
- <!-- HEADER -->
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- HEADER -->
     <header class="header-sticky glass-nav">
         <div class="container">
             <div class="flex justify-between items-center h-20">
@@ -76,14 +63,205 @@
     </header>
 
 
-<main>
-<h2>Formation et modules</h2>
-<ul>
-<li>Génie logiciel : POO, architectures, design patterns.</li>
-<li>Cybersécurité : systèmes, cryptographie, tests d’intrusion.</li>
-<li>IA & Data Science : machine learning, deep learning, data mining.</li>
-<li>Cloud et DevOps : CI/CD, conteneurs, infrastructures cloud.</li>
-</ul>
-</main>
+    <main>
+        <!-- BANNIÈRE DE TITRE -->
+        <section class="bg-eefrei-blue py-16">
+            <div class="container text-center">
+                <h1 class="text-4xl font-extrabold text-white mb-4">Nos Formations</h1>
+                <p class="text-blue-200 text-lg max-w-2xl mx-auto">
+                    Du post-bac au cycle ingénieur/mastère, construisez votre expertise dans le domaine informatique.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION PRÉSENTATION GÉNÉRALE DU CYCLE -->
+        <section class="py-16 bg-white">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                    
+                    <!-- Texte d'objectifs -->
+                    <div class="lg:col-span-2">
+                        <h2 class="text-3xl font-bold text-eefrei-blue mb-6">Objectifs Pédagogiques du Cycle</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed border-l-4 border-eefrei-light pl-4 italic">
+                            Le cycle informatique vise à former des professionnels polyvalents et agiles, prêts à devenir des leaders technologiques.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start text-gray-700">
+                                <span class="text-eefrei-light text-2xl mr-3 leading-none">✓</span>
+                                <div>
+                                    <strong class="font-semibold">Expertise Technique :</strong> Maîtriser les langages, les architectures logicielles modernes et les outils d'intelligence artificielle.
+                                </div>
+                            </li>
+                            <li class="flex items-start text-gray-700">
+                                <span class="text-eefrei-light text-2xl mr-3 leading-none">✓</span>
+                                <div>
+                                    <strong class="font-semibold">Gestion de Projet :</strong> Développer les compétences en méthodologies agiles, management d'équipe et communication professionnelle.
+                                </div>
+                            </li>
+                            <li class="flex items-start text-gray-700">
+                                <span class="text-eefrei-light text-2xl mr-3 leading-none">✓</span>
+                                <div>
+                                    <strong class="font-semibold">Innovation :</strong> Encourager la créativité, la veille technologique et la capacité à proposer des solutions disruptives.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="lg:col-span-1 relative">
+                        <div class="absolute -inset-2 bg-eefrei-sky rounded-xl transform rotate-1"></div>
+                        <img class="relative rounded-xl shadow-lg w-full object-cover h-64 md:h-80 lg:h-96" 
+                             src="../Projet/img/etudiant.jpg" 
+                             alt="Étudiants en formation">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION CYCLE BACHELOR -->
+        <section class="py-16 bg-gray-100">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-eefrei-blue mb-4">1. Cycle Bachelor (Post-Bac)</h2>
+                    <p class="text-gray-500">Un socle solide pour une insertion professionnelle rapide.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Colonne 1 : Objectifs et Débouchés -->
+                    <div class="lg:col-span-1 bg-white p-8 rounded-xl shadow-md border-t-4 border-eefrei-light">
+                        <h3 class="text-xl font-bold text-eefrei-dark mb-4 flex items-center">
+                            <svg class="w-6 h-6 mr-2 text-eefrei-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Objectifs & Filières
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Former des développeurs opérationnels avec une spécialisation immédiate dans l'une des filières suivantes :
+                        </p>
+                        <ul class="list-disc pl-5 space-y-2 text-eefrei-blue font-medium">
+                            <li>Informatique - Grade de Licence</li>
+                            <li>Cybersécurité & Réseaux</li>
+                            <li>Développeur Web & IA</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-semibold text-eefrei-dark mt-6 mb-3">Débouchés Professionnels</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm text-gray-600">
+                            <li>Développeur Full-Stack</li>
+                            <li>Administrateur Systèmes</li>
+                            <li>Consultant SI Junior</li>
+                            <li>Technicien Réseaux</li>
+                        </ul>
+                    </div>
+
+                    <!-- Colonne 2 : Programme Détaillé -->
+                    <div class="lg:col-span-2 bg-white p-8 rounded-xl shadow-md border-t-4 border-eefrei-light">
+                        <h3 class="text-xl font-bold text-eefrei-dark mb-4 flex items-center">
+                            <svg class="w-6 h-6 mr-2 text-eefrei-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            Programme Détaillé (Matières Principales)
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700">
+                            <ul class="space-y-2">
+                                <li class="font-medium text-eefrei-blue">Développement Web et Mobile</li>
+                                <li>Bases de données (SQL, NoSQL)</li>
+                                <li>Algorithmique et Structures de données</li>
+                                <li>Introduction à la Cybersécurité</li>
+                                <li>Systèmes d'exploitation (Linux/Windows)</li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="font-medium text-eefrei-blue">IA et Machine Learning (Initiation)</li>
+                                <li>Systèmes et Réseaux (TCP/IP)</li>
+                                <li>Gestion de Projet (Agile/Scrum)</li>
+                                <li>Anglais Technique et Communication</li>
+                                <li>Projets pratiques et Hackathons</li>
+                            </ul>
+                        </div>
+                        
+                        <h4 class="text-lg font-semibold text-eefrei-dark mt-6 mb-3 border-t pt-4">Modalités d'Études</h4>
+                        <div class="flex space-x-6 text-eefrei-dark">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-eefrei-light rounded-full mr-2"></span>
+                                <span class="font-medium">Initiale</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-eefrei-light rounded-full mr-2"></span>
+                                <span class="font-medium">Alternance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION CYCLE INGÉNIEUR -->
+        <section class="py-16 bg-white">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-eefrei-blue mb-4">2. Cycle Ingénieur (Majors/Filières)</h2>
+                    <p class="text-gray-500">Spécialisation de haut niveau pour devenir expert et leader en IT.</p>
+                </div>
+
+                <!-- GRILLE DES FILIÈRES -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Filière 1 : IT -->
+                    <div class="p-6 rounded-xl shadow-lg bg-eefrei-sky hover:shadow-xl transition duration-300 border-l-4 border-eefrei-blue">
+                        <div class="text-3xl text-eefrei-blue mb-3">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-eefrei-dark mb-2">Information Technology</h3>
+                        <p class="text-sm font-medium text-eefrei-blue mb-3">(Logiciels et SI)</p>
+                        <p class="text-gray-600 text-sm">
+                            Architecture de systèmes d'information, DevOps, et développement d'applications critiques.
+                        </p>
+                    </div>
+                    
+                    <!-- Filière 2 : Data Science -->
+                    <div class="p-6 rounded-xl shadow-lg bg-eefrei-sky hover:shadow-xl transition duration-300 border-l-4 border-eefrei-light">
+                        <div class="text-3xl text-eefrei-light mb-3">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-eefrei-dark mb-2">Data Science</h3>
+                        <p class="text-sm font-medium text-eefrei-light mb-3">et Big Data</p>
+                        <p class="text-gray-600 text-sm">
+                            Analyse de données massives, Machine Learning avancé, et modélisation prédictive.
+                        </p>
+                    </div>
+
+                    <!-- Filière 3 : Sécurité et Réseaux -->
+                    <div class="p-6 rounded-xl shadow-lg bg-eefrei-sky hover:shadow-xl transition duration-300 border-l-4 border-eefrei-dark">
+                        <div class="text-3xl text-eefrei-dark mb-3">
+                             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-eefrei-dark mb-2">Sécurité et Réseaux</h3>
+                        <p class="text-sm font-medium text-eefrei-dark mb-3">Cybersécurité</p>
+                        <p class="text-gray-600 text-sm">
+                            Protection des infrastructures, cryptographie, tests d'intrusion et conformité RGPD.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="bg-eefrei-blue text-white">
+        <div class="container py-8">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+                <div>
+                    <span class="text-lg font-bold">Pôle Informatique EFREI</span>
+                    <p class="text-sm text-blue-200 mt-1">Villejuif, France</p>
+                </div>
+                <div class="flex flex-wrap gap-6 text-sm">
+                    <a href="#" class="hover:text-eefrei-light transition">Mentions légales</a>
+                    <a href="contact.html" class="hover:text-eefrei-light transition">Contact</a>
+                    <a href="apropos.html" class="hover:text-eefrei-light transition">À Propos</a>
+                </div>
+                <div class="text-sm text-blue-300">
+                    &copy; 2025 Tous droits réservés.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   
 </body>
 </html>

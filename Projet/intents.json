@@ -1,0 +1,57 @@
+{
+  "intents": [
+    {
+      "keywords": ["bonjour", "salut", "hello", "coucou", "hey"],
+      "response": "Bonjour ! 👋 Je suis l'assistant du Pôle Info. Je suis là pour vous aider avec vos questions sur l'école. Par où souhaitez-vous commencer ? (ex: admission, campus, formations)"
+    },
+    {
+      "keywords": ["inscription", "admission", "postuler", "candidature", "rentrée"],
+      "response": "L'admission dépend de votre niveau :\n- **Bachelor (Bac+3)** : Candidature via Parcoursup, suivie d'épreuves et d'un entretien.\n- **Cycle Ingénieur (Bac+5)** : Admission sur dossier et entretien après un Bac+2 ou Bac+3 scientifique.\nSouhaitez-vous en savoir plus sur les dates importantes ?"
+    },
+    {
+      "keywords": ["dates", "calendrier", "délai", "quand"],
+      "response": "Pour le cycle Bachelor (Parcoursup), les phases s'étendent de janvier à juillet. Pour les admissions parallèles, nous ouvrons les dossiers en mars. Consultez la page 'Admissions' pour le calendrier précis de cette année."
+    },
+    {
+      "keywords": ["formation", "cours", "programme", "matière", "enseignement", "specialisation"],
+      "response": "Nous proposons deux cycles principaux :\n1. **Bachelor** : Axé sur les fondamentaux (programmation, mathématiques, gestion de projet).\n2. **Cycle Ingénieur** : Permet de choisir parmi 5 spécialisations majeures (Cybersécurité, Data Science, Cloud Computing, Objets Connectés, etc.).\nLaquelle de ces options vous intéresse le plus ?"
+    },
+    {
+      "keywords": ["stage", "alternance", "entreprise", "professionnel", "pro", "embauche"],
+      "response": "L'école met l'accent sur l'expérience professionnelle. L'alternance est fortement encouragée à partir de la 3e année. En moyenne, nos étudiants passent 12 à 18 mois en entreprise au cours de leur cursus. Nous avons un service dédié pour vous aider à trouver votre mission !"
+    },
+    {
+      "keywords": ["debouches", "carriere", "salaire", "emploi", "futur"],
+      "response": "Nos diplômés s'insèrent très rapidement (95% en moins de 6 mois) dans des postes clés : Architecte Cloud, Chef de Projet Digital, Data Scientist ou Consultant Cybersécurité. Le salaire moyen d'embauche se situe entre 42k€ et 46k€."
+    },
+    {
+      "keywords": ["soutien", "aide", "tutorat", "difficulté"],
+      "response": "Nous offrons un système de tutorat par les étudiants des années supérieures pour les matières fondamentales. De plus, un accompagnement personnalisé est disponible via le service 'Réussite Étudiante' pour toute difficulté académique ou personnelle."
+    },
+    {
+      "keywords": ["contact", "téléphone", "mail", "adresse", "joindre", "localiser"],
+      "response": "Pour toute question administrative : contact@efrei.fr. Pour les admissions : admission@efrei.fr.\nNotre campus principal est situé à **Villejuif (94)**, facilement accessible par la ligne 7 du métro (arrêt Villejuif-Louis Aragon). Nous sommes ouverts du lundi au vendredi de 8h30 à 18h00."
+    },
+    {
+      "keywords": ["tarif", "prix", "coût", "payer", "financement", "bourse"],
+      "response": "Les frais de scolarité sont différents entre le Bachelor et le Cycle Ingénieur. Pour l'alternance, ils sont généralement pris en charge par l'entreprise d'accueil. Des informations détaillées sur les bourses et les prêts étudiants sont disponibles sur demande."
+    },
+    {
+      "keywords": ["campus", "local", "batiment", "visiter", "salle"],
+      "response": "Notre campus est moderne et équipé de labs, de salles informatiques de pointe et d'espaces de coworking. Vous pouvez vous inscrire à une 'Journée Portes Ouvertes' (JPO) pour une visite physique, ou faire une visite virtuelle sur notre site !"
+    },
+    {
+      "keywords": ["vie etudiante", "association", "club", "sport", "fete"],
+      "response": "La vie associative est très riche ! Nous avons plus de 40 associations étudiantes : sport, gaming, humanitaire, événementiel... C'est un excellent moyen de vous intégrer et de développer des compétences de gestion de projet. Quel type d'association vous plaît ?"
+    },
+    {
+      "keywords": ["méthode", "pedagogie", "apprendre", "pratique"],
+      "response": "Notre pédagogie est basée sur le 'Learning by Doing'. Cela signifie beaucoup de projets, de travaux de groupe, et de labs pratiques pour appliquer directement la théorie vue en cours. L'accent est mis sur l'innovation et la résolution de problèmes réels."
+    },
+    {
+      "keywords": ["merci", "top", "super", "génial", "aurevoir", "adieu"],
+      "response": "De rien, c'est un plaisir de vous assister ! N'hésitez pas à me solliciter si d'autres questions émergent. À très bientôt sur notre campus ! 👋"
+    }
+  ],
+  "default": "Désolé, je n'ai pas trouvé de réponse pertinente dans ma base de connaissances. 😞 Pourriez-vous reformuler votre question ou choisir un mot-clé comme 'admission', 'formation' ou 'contact' ?"
+}

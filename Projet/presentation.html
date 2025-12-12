@@ -10,23 +10,8 @@
 
     <!-- 2. Chargement de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'eefrei-dark': '#0f172a',
-                        'eefrei-blue': '#003366',
-                        'eefrei-light': '#3b82f6',
-                        'eefrei-sky': '#e0f2fe',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <script src="script.js"></script>
+    
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
@@ -120,7 +105,7 @@
                     <div class="absolute -inset-4 bg-eefrei-sky rounded-xl transform rotate-2"></div>
                     <!-- REMPLACER src="images/presentation_groupe.jpg" PAR VOTRE FICHIER -->
                     <img class="relative rounded-xl shadow-lg w-full object-cover h-80" 
-                         src="images/presentation_groupe.jpg" 
+                         src="../Projet/img/presentation_groupe.jpg" 
                          alt="Présentation du pôle">
                 </div>
             </div>
@@ -130,6 +115,9 @@
         <section class="py-16 bg-gray-50">
             <div class="container">
                 <div class="text-center mb-12">
+                    <img class="relative rounded-xl shadow-lg w-full object-cover h-80" 
+                         src="../Projet/img/presentation_groupe.jpg" 
+                         alt="Présentation du pôle">
                     <h2 class="text-3xl font-bold text-eefrei-blue mb-2">Nos Professeurs</h2>
                     <p class="text-gray-500">Des experts passionnés pour vous guider.</p>
                 </div>
@@ -238,12 +226,6 @@
         </div>
     </footer>
 
-    <script>
-        const btn = document.getElementById('menu-button');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+   
 </body>
 </html>
