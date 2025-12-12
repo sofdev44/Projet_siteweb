@@ -5,22 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Présentation — Pôle Informatique EFREI</title>
     
-    <!-- 1. Fichier de style CSS global -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- 2. Chargement de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Couleurs alignées sur le styles.css pour une cohérence maximale
+                        'eefrei-blue': '#003366', // Bleu institutionnel
+                        'eefrei-light': '#3b82f6', // Bleu clair (Accent)
+                        'eefrei-dark': '#0f172a',  // Bleu très foncé
+                        'eefrei-sky': '#e0f2fe',   // Bleu ciel très clair
+                    },
+                }
+            }
+        }
+    </script>
     
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-    <!-- HEADER (Identique à l'accueil) -->
     <header class="header-sticky glass-nav">
         <div class="container">
             <div class="flex justify-between items-center h-20">
                 
-                <!-- LOGO -->
                 <div class="flex-shrink-0 flex items-center gap-3">
                     <a href="accueil.html" class="flex items-center gap-2">
                         <img class="h-12 w-auto object-contain" src="../Projet/img/logoefrei.png" alt="Logo EFREI">
@@ -31,10 +43,8 @@
                     </a>
                 </div>
 
-                <!-- NAVIGATION -->
                 <nav class="hidden md:flex space-x-8 main-nav">
                     <a href="accueil.html" class="text-gray-600 font-medium hover:text-eefrei-light transition">Accueil</a>
-                    <!-- MENU ACTIF SUR PRÉSENTATION -->
                     <a href="presentation.html" class="active text-eefrei-blue font-bold border-b-2 border-eefrei-light pb-1">Présentation</a>
                     <a href="enseignement.html" class="text-gray-600 font-medium hover:text-eefrei-light transition">Enseignement</a>
                     <a href="projets.html" class="text-gray-600 font-medium hover:text-eefrei-light transition">Projets</a>
@@ -43,7 +53,6 @@
                     <a href="apropos.html" class="btn btn-primary shadow-md hover:bg-eefrei-dark px-4 py-2">À Propos</a>
                 </nav>
 
-                <!-- BOUTON MOBILE -->
                 <div class="md:hidden">
                     <button id="menu-button" class="text-eefrei-blue p-2">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -51,7 +60,6 @@
                 </div>
             </div>
         </div>
-        <!-- MENU MOBILE -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
             <div class="px-4 pt-2 pb-4 space-y-1">
                 <a href="accueil.html" class="block py-2 text-gray-600">Accueil</a>
@@ -66,7 +74,6 @@
     </header>
 
     <main>
-        <!-- BANNIÈRE DE TITRE (Plus petite que l'accueil) -->
         <section class="bg-eefrei-blue py-16">
             <div class="container text-center">
                 <h1 class="text-4xl font-extrabold text-white mb-4">Qui sommes-nous ?</h1>
@@ -74,11 +81,9 @@
             </div>
         </section>
 
-        <!-- SECTION 1 : PRÉSENTATION GÉNÉRALE -->
         <section class="py-16 bg-white">
             <div class="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 
-                <!-- Texte de présentation -->
                 <div>
                     <h2 class="text-3xl font-bold text-eefrei-blue mb-6">Notre Mission</h2>
                     <p class="text-gray-600 mb-4 leading-relaxed">
@@ -100,10 +105,8 @@
                     </ul>
                 </div>
 
-                <!-- Image d'illustration locale -->
                 <div class="relative">
                     <div class="absolute -inset-4 bg-eefrei-sky rounded-xl transform rotate-2"></div>
-                    <!-- REMPLACER src="images/presentation_groupe.jpg" PAR VOTRE FICHIER -->
                     <img class="relative rounded-xl shadow-lg w-full object-cover h-80" 
                          src="../Projet/img/presentation_groupe.jpg" 
                          alt="Présentation du pôle">
@@ -111,67 +114,61 @@
             </div>
         </section>
 
-        <!-- SECTION 2 : L'ÉQUIPE PÉDAGOGIQUE (Professeurs) -->
         <section class="py-16 bg-gray-50">
-            <div class="container">
+            <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
-                    <img class="relative rounded-xl shadow-lg w-full object-cover h-80" 
+                    
+                    <img class="relative rounded-xl shadow-lg w-full object-cover h-80 mb-8" 
                          src="../Projet/img/presentation_groupe.jpg" 
                          alt="Présentation du pôle">
-                    <h2 class="text-3xl font-bold text-eefrei-blue mb-2">Nos Professeurs</h2>
-                    <p class="text-gray-500">Des experts passionnés pour vous guider.</p>
+                         
+                    <h2 class="text-3xl font-bold text-eefrei-blue mb-4">Nos Professeurs</h2>
+                
+                    <p class="text-gray-500 max-w-2xl mx-auto">Des experts passionnés pour vous guider.</p>
                 </div>
 
-                <!-- GRILLE DES PROFESSEURS -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                    <!-- PROF 1 -->
                     <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 p-6 text-center border border-gray-100">
-                        <!-- Photo Ronde -->
                         <div class="w-32 h-32 mx-auto mb-4 relative">
-                             <!-- REMPLACER src="images/prof_dupont.jpg" -->
                             <img class="w-full h-full rounded-full object-cover border-4 border-eefrei-sky" 
-                                 src="images/prof_dupont.jpg" 
-                                 alt="Photo Professeur">
+                                 src="img/asma.png" 
+                                 alt="Photo Professeur Asma Gabis">
                         </div>
-                        <h3 class="text-xl font-bold text-eefrei-blue">Dr. Jean Dupont</h3>
+                        <h3 class="text-xl font-bold text-eefrei-blue">Asma Gabis</h3>
                         <p class="text-eefrei-light font-medium text-sm mb-3">Chef du Département</p>
                         <p class="text-gray-600 text-sm mb-6">
                             Spécialiste en architecture logicielle et gestion de projets complexes. 15 ans d'expérience.
                         </p>
-                        <!-- Bouton LinkedIn -->
-                        <a href="https://linkedin.com" target="_blank" class="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                        <a href="https://fr.linkedin.com/in/asma-gabis-1ab439244" target="_blank" class="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                             LinkedIn
                         </a>
                     </div>
 
-                    <!-- PROF 2 -->
                     <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 p-6 text-center border border-gray-100">
                         <div class="w-32 h-32 mx-auto mb-4 relative">
-                            <!-- REMPLACER src="images/prof_martin.jpg" -->
                             <img class="w-full h-full rounded-full object-cover border-4 border-eefrei-sky" 
-                                 src="images/prof_martin.jpg" 
-                                 alt="Photo Professeur">
+                                 src="img/1715325978402.jpeg"
+                                 alt="Photo Professeur Sophie Martin" 
+                            >
                         </div>
                         <h3 class="text-xl font-bold text-eefrei-blue">Mme. Sophie Martin</h3>
                         <p class="text-eefrei-light font-medium text-sm mb-3">Experte Cybersécurité</p>
                         <p class="text-gray-600 text-sm mb-6">
                             Ancienne consultante sécurité. Enseigne la cryptographie et la sécurité réseaux.
                         </p>
-                        <a href="https://linkedin.com" target="_blank" class="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                        <a href="https://fr.linkedin.com/in/a-yvan-guifo-fodjo-35847a126" target="_blank" class="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                             LinkedIn
                         </a>
                     </div>
 
-                    <!-- PROF 3 -->
                     <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 p-6 text-center border border-gray-100">
                         <div class="w-32 h-32 mx-auto mb-4 relative">
-                            <!-- REMPLACER src="images/prof_diop.jpg" -->
                             <img class="w-full h-full rounded-full object-cover border-4 border-eefrei-sky" 
                                  src="images/prof_diop.jpg" 
-                                 alt="Photo Professeur">
+                                 alt="Photo Professeur Amadou Diop">
                         </div>
                         <h3 class="text-xl font-bold text-eefrei-blue">M. Amadou Diop</h3>
                         <p class="text-eefrei-light font-medium text-sm mb-3">IA & Data Science</p>
@@ -184,13 +181,11 @@
                         </a>
                     </div>
 
-                    <!-- PROF 4 -->
                     <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 p-6 text-center border border-gray-100">
                         <div class="w-32 h-32 mx-auto mb-4 relative">
-                            <!-- REMPLACER src="images/prof_leroy.jpg" -->
                             <img class="w-full h-full rounded-full object-cover border-4 border-eefrei-sky" 
                                  src="images/prof_leroy.jpg" 
-                                 alt="Photo Professeur">
+                                 alt="Photo Professeur Clara Leroy">
                         </div>
                         <h3 class="text-xl font-bold text-eefrei-blue">Mme. Clara Leroy</h3>
                         <p class="text-eefrei-light font-medium text-sm mb-3">Développement Web</p>
@@ -208,7 +203,6 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-eefrei-blue text-white">
         <div class="container py-8 sm:flex sm:justify-between sm:items-center">
             <div class="mb-4 sm:mb-0">
