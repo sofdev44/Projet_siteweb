@@ -5,23 +5,7 @@
 <title>Projets & activités — EFREI</title>
 <link rel="stylesheet" href="styles.css" />
 <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'eefrei-dark': '#0f172a',
-                        'eefrei-blue': '#003366',
-                        'eefrei-light': '#3b82f6',
-                        'eefrei-sky': '#e0f2fe',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+<script src="script.js"></script>
 </head>
 <body>
  <header class="header-sticky glass-nav">
@@ -45,7 +29,7 @@
                     <a href="enseignement.html" class="text-gray-600 font-medium">Enseignement</a>
                     <a href="projets.html" class="active text-eefrei-blue font-bold border-b-2 border-eefrei-light pb-1">Projets</a>
                     <a href="vieetudiante.html" class="text-gray-600 font-medium">Vie étudiante</a>
-                    <a href="contact.html" class="btn btn-primary shadow-md hover:bg-eefrei-dark px-4 py-2">Contact</a>
+                    <a href="contact.html" class="text-gray-600 font-medium">Contact</a>
                     <a href="apropos.html" class="btn btn-primary shadow-md hover:bg-eefrei-dark px-4 py-2">À Propos</a>
                 </nav>
 
@@ -61,64 +45,104 @@
                 <a href="accueil.html" class="block py-2 text-eefrei-blue font-bold">Accueil</a>
                 <a href="presentation.html" class="block py-2 text-gray-600">Présentation</a>
                 <a href="enseignement.html" class="block py-2 text-gray-600">Enseignement</a>
-                <a href="projets.html" class="block py-2 text-eefrei-blue font-bold">Projets</a>
+                <a href="projets.html" class="block py-2 text-gray-600">Projets</a>
                 <a href="vieetudiante.html" class="block py-2 text-gray-600">Vie étudiante</a>
-                <a href="contact.html" class="block py-2 text-eefrei-light font-semibold">Contact</a>
+                <a href="contact.html" class="block py-2 text-gray-600">Contact</a>
                 <a href="apropos.html" class="block py-2 text-eefrei-light font-semibold">À Propos</a>
             </div>
         </div>
     </header>
 
-<main class="py-12">
-    <div class="container mx-auto px-4">
-        
-        <section class="bg-eefrei-sky p-8 rounded-xl">
-            <h1 class="text-4xl font-extrabold text-eefrei-dark mb-8 text-center border-b-2 border-eefrei-dark pb-2">Projets de Recherche & Doctorats</h1>
-            <p class="text-lg text-gray-700 mb-10 text-center max-w-4xl mx-auto">
-                Le laboratoire de l'EFREI (EFREI Research Lab), en lien avec l'Université Paris-Panthéon-Assas, mène une recherche numérique responsable, éthique et pluridisciplinaire, axée sur trois axes majeurs.
-            </p>
+    <main>
 
-            <div class="space-y-10">
+    <!-- BANNIÈRE DE TITRE -->
+        <section class="bg-eefrei-blue py-16">
+            <div class="container text-center">
+                <h1 class="text-4xl font-extrabold text-white mb-4">Nos Formations</h1>
+                <p class="text-blue-200 text-lg max-w-2xl mx-auto">
+                    Du post-bac au cycle ingénieur/mastère, construisez votre expertise dans le domaine informatique.
+                </p>
+            </div>
+        </section>
+       
+        <section class="bg-gray-100 p-10 rounded-3xl">
+            <div class="text-center max-w-4xl mx-auto mb-12">
+                <h1 class="text-4xl font-extrabold text-eefrei-dark mb-6 relative inline-block">
+                    Projets de Recherche & Doctorats
+                    <span class="absolute -bottom-2 left-1/4 right-1/4 h-1 bg-eefrei-blue rounded-full"></span>
+                </h1>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Le laboratoire de l'EFREI (EFREI Research Lab), en partenariat avec l'Université Paris-Panthéon-Assas, façonne un numérique responsable. Nous explorons trois axes majeurs pour répondre aux défis technologiques et éthiques de demain.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <div class="border-l-4 border-eefrei-blue pl-4">
-                    <h3 class="text-2xl font-bold text-eefrei-blue mb-3">1. Sécurité, Résilience & Confiance numérique</h3>
-                    <ul class="list-disc ml-6 space-y-2 text-gray-700">
-                        <li><strong>Objectif :</strong> Concilier innovation et cybersécurité pour un numérique de confiance.</li>
-                        <li><strong>Expertise :</strong> L'EFREI, membre du Campus Cyber, est à la pointe, notamment avec des chercheuses comme <strong>Fériel Bouakkaz</strong> (Instructrice Certified Ethical Hacker).</li>
-                        <li><strong>Domaine :</strong> Cryptographie, sécurité des systèmes, résilience.</li>
-                    </ul>
-                </div>
-                
-                <div class="border-l-4 border-eefrei-blue pl-4">
-                    <h3 class="text-2xl font-bold text-eefrei-blue mb-3">2. Réseaux de communication : De la 5G à la 6G</h3>
-                    <ul class="list-disc ml-6 space-y-2 text-gray-700">
-                        <li><strong>Objectif :</strong> Construire l'internet du futur en explorant les technologies de communication avancées.</li>
-                        <li><strong>Thèse en cours :</strong> Des doctorants travaillent sur l'Integrated Sensing and Communication.</li>
-                        <li><strong>Domaine :</strong> Télécommunications, réseaux nouvelle génération, infrastructures.</li>
-                    </ul>
-                </div>
-                
-                <div class="border-l-4 border-eefrei-blue pl-4">
-                    <h3 class="text-2xl font-bold text-eefrei-blue mb-3">3. Systèmes embarqués intelligents et environnements connectés</h3>
-                    <ul class="list-disc ml-6 space-y-2 text-gray-700">
-                        <li><strong>Objectif :</strong> Donner vie aux objets connectés et aux environnements intelligents.</li>
-                        <li><strong>Domaine :</strong> IoT, systèmes robotiques, capteurs, efficacité énergétique logicielle.</li>
-                    </ul>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border-t-4 border-eefrei-blue flex flex-col">
+                    <div class="mb-4">
+                        <span class="text-5xl font-black text-eefrei-sky opacity-50">01</span>
+                        <h3 class="text-xl font-bold text-eefrei-blue mt-2">Cybersécurité & Résilience</h3>
+                    </div>
+                    <p class="text-gray-600 flex-grow">
+                        Notre objectif est de concilier innovation et confiance numérique. Membre du <strong>Campus Cyber</strong>, l'EFREI se distingue par son expertise en cryptographie et résilience des systèmes, portée par des figures comme <strong>Fériel Bouakkaz</strong>.
+                    </p>
                 </div>
 
-                <div class="border-t pt-6">
-                    <h3 class="text-2xl font-bold text-eefrei-dark mb-3 flex items-center gap-2">
-                        💡 Focus Doctorat : LegalTech et Blockchain
-                    </h3>
-                    <p class="text-gray-700 pl-4">
-                        Un projet de la <strong>PhD Box</strong> explore l'utilisation de la <strong>Blockchain</strong> et de l'<strong>Intelligence Artificielle</strong> pour la résolution des litiges. Ce projet illustre la recherche pluridisciplinaire menée à l'intersection du numérique et du droit (en lien avec Paris-Panthéon-Assas).
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border-t-4 border-eefrei-blue flex flex-col">
+                    <div class="mb-4">
+                        <span class="text-5xl font-black text-eefrei-sky opacity-50">02</span>
+                        <h3 class="text-xl font-bold text-eefrei-blue mt-2">Réseaux : De la 5G à la 6G</h3>
+                    </div>
+                    <p class="text-gray-600 flex-grow">
+                        Nous construisons l'internet du futur. Nos doctorants travaillent activement sur les infrastructures nouvelle génération et l'<em>Integrated Sensing and Communication</em> pour repousser les limites de la connectivité mondiale.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border-t-4 border-eefrei-blue flex flex-col">
+                    <div class="mb-4">
+                        <span class="text-5xl font-black text-eefrei-sky opacity-50">03</span>
+                        <h3 class="text-xl font-bold text-eefrei-blue mt-2">Systèmes Intelligents & IoT</h3>
+                    </div>
+                    <p class="text-gray-600 flex-grow">
+                        Nous donnons vie aux environnements connectés. Nos recherches se concentrent sur l'optimisation des systèmes embarqués, la robotique et l'efficacité énergétique logicielle pour un monde plus interactif et durable.
                     </p>
                 </div>
 
             </div>
+
+            <div class="mt-12 bg-white rounded-2xl p-1 shadow-lg">
+                <div class="bg-eefrei-dark rounded-xl p-8 md:flex items-center gap-8 text-white">
+                    <div class="md:w-1/3 mb-6 md:mb-0 text-center md:text-left">
+                        <span class="bg-eefrei-blue text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">PhD Box</span>
+                        <h3 class="text-2xl font-bold mt-3">Focus : LegalTech & Blockchain</h3>
+                    </div>
+                    <div class="md:w-2/3 border-l-0 md:border-l border-gray-600 md:pl-8">
+                        <p class="text-gray-300 leading-relaxed">
+                            À l'intersection du droit et de la technologie, un projet phare de notre laboratoire explore l'usage de la <strong>Blockchain</strong> et de l'<strong>IA</strong> pour la résolution des litiges. Une collaboration unique illustrant notre synergie avec les juristes de Paris-Panthéon-Assas.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
-        
-    </div>
-</main>
+    </main>
+ <!-- FOOTER -->
+    <footer class="bg-eefrei-blue text-white">
+        <div class="container py-8">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+                <div>
+                    <span class="text-lg font-bold">Pôle Informatique EFREI</span>
+                    <p class="text-sm text-blue-200 mt-1">Villejuif, France</p>
+                </div>
+                <div class="flex flex-wrap gap-6 text-sm">
+                    <a href="#" class="hover:text-eefrei-light transition">Mentions légales</a>
+                    <a href="contact.html" class="hover:text-eefrei-light transition">Contact</a>
+                    <a href="apropos.html" class="hover:text-eefrei-light transition">À Propos</a>
+                </div>
+                <div class="text-sm text-blue-300">
+                    &copy; 2025 Tous droits réservés.
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

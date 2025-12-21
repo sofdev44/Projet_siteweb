@@ -5,23 +5,7 @@
 <title>Vie étudiante — EFREI</title>
 <link rel="stylesheet" href="styles.css" />
 <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'eefrei-dark': '#0f172a',
-                        'eefrei-blue': '#003366',
-                        'eefrei-light': '#3b82f6',
-                        'eefrei-sky': '#e0f2fe',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+<script src="script.js"></script>
 </head>
 <body>
  <!-- HEADER -->
@@ -44,12 +28,12 @@
 
                 <!-- NAVIGATION -->
                 <nav class="hidden md:flex space-x-8 main-nav">
-                    <a href="accueil.html" class="active text-eefrei-blue font-bold border-b-2 border-eefrei-light pb-1">Accueil</a>
+                    <a href="accueil.html" class="text-gray-600 font-medium">Accueil</a>
                     <a href="presentation.html" class="text-gray-600 font-medium">Présentation</a>
                     <a href="enseignement.html" class="text-gray-600 font-medium">Enseignement</a>
                     <a href="projets.html" class="text-gray-600 font-medium">Projets</a>
-                    <a href="vieetudiante.html" class="text-gray-600 font-medium">Vie étudiante</a>
-                    <a href="contact.html" class="btn btn-primary shadow-md hover:bg-eefrei-dark px-4 py-2">Contact</a>
+                    <a href="vieetudiante.html" class="active text-eefrei-blue font-bold border-b-2 border-eefrei-light pb-1">Vie étudiante</a>
+                    <a href="contact.html" class="text-gray-600 font-medium">Contact</a>
                     <a href="apropos.html" class="btn btn-primary shadow-md hover:bg-eefrei-dark px-4 py-2">À Propos</a>
                 </nav>
 
@@ -69,19 +53,170 @@
                 <a href="enseignement.html" class="block py-2 text-gray-600">Enseignement</a>
                 <a href="projets.html" class="block py-2 text-gray-600">Projets</a>
                 <a href="vieetudiante.html" class="block py-2 text-gray-600">Vie étudiante</a>
-                <a href="contact.html" class="block py-2 text-eefrei-light font-semibold">Contact</a>
+                <a href="contact.html" class="block py-2 text-gray-600">Contact</a>
                 <a href="apropos.html" class="block py-2 text-eefrei-light font-semibold">À Propos</a>
             </div>
         </div>
     </header>
 
-<main>
-<h2>Clubs & Associations</h2>
-<ul>
-<li>Club Dev : Coding nights, conférences.</li>
-<li>Club Sécurité : CTFs, ateliers d'initiation.</li>
-<li>FabLab : Prototypage, impression 3D.</li>
-</ul>
-</main>
+    <main>
+        <!-- SECTION HÉRO -->
+        <div class="relative h-[400px] flex items-center justify-center overflow-hidden bg-eefrei-dark">
+            
+            <!-- IMAGE DE FOND  -->
+            <div class="absolute inset-0 z-0">
+
+                <img class="w-full h-full object-cover opacity-40" 
+                     src="../Projet/img/vie.jpg" 
+                     alt="Background Code et Technologie">
+                <div class="absolute inset-0 bg-gradient-to-t from-eefrei-blue/90 via-eefrei-blue/50 to-transparent"></div>
+            </div>
+
+            <!-- CONTENU -->
+           <div class="container text-center relative z-10">
+                <h1 class="text-4xl font-extrabold text-white mb-4">Vie Étudiante & Campus</h1>
+                <p class="text-blue-100 text-lg max-w-2xl mx-auto">
+                    Un environnement stimulant à Villejuif pour apprendre, créer et s'épanouir au cœur de la tech.
+                </p>
+            </div>
+        </div>
+        
+
+        <!-- SECTION 1 : INSTALLATIONS ET MOYENS (Avec Images) -->
+        <section class="py-16 bg-white">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-eefrei-blue mb-4">Un Campus Connecté</h2>
+                    <p class="text-gray-500 max-w-2xl mx-auto">Des infrastructures modernes pour soutenir votre réussite académique et vos projets.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Carte 1 : Labs -->
+                    <div class="bg-gray-50 rounded-xl border border-gray-100 overflow-hidden hover:shadow-lg transition group">
+                        <div class="h-48 overflow-hidden">
+                            <!-- IMAGE LOCALE 1 -->
+                            <img src="../Projet/img/lab.jpg" 
+                                 alt="Labs Informatiques" 
+                                 class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-eefrei-blue mb-2">Labs Informatiques</h3>
+                            <p class="text-gray-600 text-sm">
+                                Des salles équipées de machines performantes (double écran, GPU) accessibles 24/7 pour vos projets de code et de rendu 3D.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Carte 2 : Coworking -->
+                    <div class="bg-gray-50 rounded-xl border border-gray-100 overflow-hidden hover:shadow-lg transition group">
+                        <div class="h-48 overflow-hidden">
+                            <!-- IMAGE LOCALE 2 -->
+                            <img src="../Projet/img/coworking.jpg" 
+                                 alt="Espace Coworking" 
+                                 class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                                 onerror="this.src='https://placehold.co/400x300/003366/ffffff?text=Photo+Coworking'">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-eefrei-blue mb-2">Espaces Coworking</h3>
+                            <p class="text-gray-600 text-sm">
+                                La "Ruche", un espace modulaire et convivial conçu pour le travail de groupe, le brainstorming et la détente entre deux cours.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Carte 3 : E-Learning -->
+                    <div class="bg-gray-50 rounded-xl border border-gray-100 overflow-hidden hover:shadow-lg transition group">
+                        <div class="h-48 overflow-hidden">
+                            <!-- IMAGE LOCALE 3 -->
+                            <img src="../Projet/img/projet.jpg" 
+                                 alt="E-Learning" 
+                                 class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                                 onerror="this.src='https://placehold.co/400x300/003366/ffffff?text=Photo+E-Learning'">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-eefrei-blue mb-2">E-Learning Illimité</h3>
+                            <p class="text-gray-600 text-sm">
+                                Accès premium offert à <strong>OpenClassrooms</strong> et <strong>LinkedIn Learning</strong> pour vous auto-former sur les dernières technos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 : CLUBS ET ASSOCIATIONS -->
+        <section class="py-16 bg-eefrei-sky">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-eefrei-blue mb-6">La Vie Associative Tech</h2>
+                        <p class="text-gray-700 mb-6">
+                            L'EFREI est réputée pour sa vie associative. Pour les passionnés d'informatique, c'est le terrain de jeu idéal pour pratiquer hors des cours.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                                <span class="bg-eefrei-blue text-white p-2 rounded-full mr-4 text-sm font-bold">CTF</span>
+                                <div>
+                                    <h4 class="font-bold text-eefrei-dark">Club Cybersécurité</h4>
+                                    <p class="text-xs text-gray-500">Participation aux compétitions Capture The Flag et ateliers de hacking éthique.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                                <span class="bg-eefrei-light text-white p-2 rounded-full mr-4 text-sm font-bold">DEV</span>
+                                <div>
+                                    <h4 class="font-bold text-eefrei-dark">Coding Club</h4>
+                                    <p class="text-xs text-gray-500">Hackathons, projets Open Source et initiation aux nouveaux langages.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                                <span class="bg-purple-600 text-white p-2 rounded-full mr-4 text-sm font-bold">GAME</span>
+                                <div>
+                                    <h4 class="font-bold text-eefrei-dark">EFREI E-Sport</h4>
+                                    <p class="text-xs text-gray-500">Tournois LoL, Valorant, et développement de jeux vidéo.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                                <span class="bg-gray-700 text-white p-2 rounded-full mr-4 text-sm font-bold">BOT</span>
+                                <div>
+                                    <h4 class="font-bold text-eefrei-dark">Robotique & IOT</h4>
+                                    <p class="text-xs text-gray-500">Coupe de France de Robotique et projets embarqués.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image Illustration Asso -->
+                    <div class="relative h-96 rounded-xl overflow-hidden shadow-xl">
+                        <!-- IMAGE LOCALE 4 -->
+                        <img src="../Projet/img/cybernight.jpg" 
+                             alt="Ambiance associative" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://placehold.co/600x800/003366/ffffff?text=Vie+Associative'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-eefrei-blue text-white">
+        <div class="container py-8 sm:flex sm:justify-between sm:items-center">
+            <div class="mb-4 sm:mb-0">
+                <span class="text-lg font-bold">Pôle Informatique EFREI</span>
+                <p class="text-sm text-blue-200 mt-1">Villejuif, France</p>
+            </div>
+            <div class="flex space-x-6 text-sm">
+                <a href="#" class="hover:text-eefrei-light transition">Mentions légales</a>
+                <a href="contact.html" class="hover:text-eefrei-light transition">Contact</a>
+                <a href="apropos.html" class="hover:text-eefrei-light transition">À Propos</a>
+            </div>
+            <div class="mt-4 sm:mt-0 text-sm text-blue-300">
+                &copy; 2025 Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

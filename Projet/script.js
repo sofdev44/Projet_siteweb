@@ -184,4 +184,3 @@ function initChatbot() {
     }
 }
 
-src="https://cdn.tailwindcss.com"

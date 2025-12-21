@@ -1,8 +1,8 @@
-/* -------------------------------------------------------------------------
-   1. FONDATIONS & VARIABLES GLOBALES
---------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
+/* 1. FONDATIONS                               */
+/* -------------------------------------------------------------------------- */
 
-/* Import de la police Inter */
+/* Import de la police Inter et des couleurs Tailwind personnalisées (pour référence) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
 
 /* Réinitialisation de base */
@@ -13,12 +13,11 @@
 }
 
 :root {
-    /* Variables de Couleurs EFREI (Alignées sur la configuration Tailwind) */
-    --eefrei-dark: #0f172a;       /* Bleu très foncé */
-    --eefrei-blue: #003366;       /* Bleu institutionnel */
-    --eefrei-light: #3b82f6;      /* Bleu clair (Accent) */
-    --eefrei-sky: #e0f2fe;        /* Bleu ciel très clair */
-
+    /* Couleurs définies dans Tailwind Config (pour référence visuelle) */
+    --color-dark: #0f172a;       /* eefrei-dark */
+    --color-blue: #003366;       /* eefrei-blue (Institutionnel) */
+    --color-light-blue: #3b82f6; /* eefrei-light (Accent) */
+    --color-sky: #e0f2fe;        /* eefrei-sky (Fond pâle) */
     --text-primary: #1f2937;
     --text-secondary: #4b5563;
 }
@@ -35,40 +34,37 @@ a {
     transition: color 0.3s, background-color 0.3s;
 }
 
+/* -------------------------------------------------------------------------- */
+/* 2. UTILITAIRES                              */
+/* -------------------------------------------------------------------------- */
+
 /* Conteneur Centré */
 .container {
     width: 100%;
-    max-width: 1280px; /* max-w-7xl */
+    max-width: 1280px; 
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-/* -------------------------------------------------------------------------- */
-/* 2. UTILITAIRES & BOUTONS                              */
-/* -------------------------------------------------------------------------- */
-
+/* Boutons */
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     font-weight: 700;
     text-align: center;
     border: 2px solid transparent;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
 }
 
 .btn-primary {
-    background-color: var(--eefrei-blue); /* Utilise la couleur institutionnelle */
+    background-color: var(--color-light-blue);
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: var(--eefrei-dark);
+    background-color: var(--color-blue);
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(0, 51, 102, 0.2);
 }
@@ -81,24 +77,25 @@ a {
 
 .btn-outline-white:hover {
     background-color: white;
-    color: var(--eefrei-blue);
+    color: var(--color-blue);
 }
 
 /* -------------------------------------------------------------------------- */
-/* 3. HEADER & NAVIGATION                                */
+/* 3. HEADER                                 */
 /* -------------------------------------------------------------------------- */
 
 .header-sticky {
     position: sticky;
     top: 0;
     z-index: 50;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+/* Effet de verre pour la barre de navigation (Gardé de la version précédente) */
 .glass-nav {
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
 }
 
 /* Liens de navigation */
@@ -108,18 +105,123 @@ a {
 
 .main-nav a:hover,
 .main-nav a.active {
-    color: var(--eefrei-blue); /* Texte actif en bleu institutionnel */
+    color: var(--color-light-blue);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4. CARTES                                 */
+/* -------------------------------------------------------------------------- */
+
+.card {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* Effet de zoom sur les images des cartes (Gardé de la version précédente) */
+.card-zoom:hover .card-img {
+    transform: scale(1.05);
+}
+
+.card-img {
+    transition: transform 0.5s ease;
+}
+
+/* Lien "En savoir plus" */
+.card-link {
+    color: var(--color-light-blue);
+    font-weight: 600;
+}
+
+.card-link:hover {
+    color: var(--color-blue);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 5. FOOTER                                 */
+/* -------------------------------------------------------------------------- */
+
+footer {
+    background-color: var(--color-blue);
+    color: white;
+    padding-top: 2rem;
+}
+
+footer a {
+    color: #93c5fd; /* blue-300 */
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* -------------------------------------------------------------------------
+   1. VARIABLES CSS GLOBALES
+--------------------------------------------------------------------------*/
+:root {
+    --eefrei-dark: #0f172a;       /* Bleu très foncé */
+    --eefrei-blue: #003366;       /* Bleu institutionnel */
+    --eefrei-light: #FF9900;      /* Orange/Jaune secondaire */
+    --eefrei-sky: #e0f2fe;        /* Bleu ciel très clair */
+}
+
+/* -------------------------------------------------------------------------
+   2. STYLE DU HEADER ET NAVIGATION
+--------------------------------------------------------------------------*/
+.header-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .main-nav a.active {
-    border-bottom: 2px solid var(--eefrei-light); /* Soulignement en bleu clair (Accent) */
+    color: var(--eefrei-blue);
+    border-bottom: 2px solid var(--eefrei-light);
     font-weight: 700;
 }
 
+/* -------------------------------------------------------------------------
+   3. STYLES DES BOUTONS & CARTES
+--------------------------------------------------------------------------*/
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
 
-/* -------------------------------------------------------------------------- */
-/* 4. CARTES (Styles généraux)                                 */
-/* -------------------------------------------------------------------------- */
+.btn-primary {
+    background-color: var(--eefrei-blue);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: var(--eefrei-dark);
+}
+
+.btn-outline-white {
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+}
+.btn-outline-white:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
 
 .card {
     background-color: white;
@@ -131,7 +233,6 @@ a {
 .card-zoom:hover .card-img {
     transform: scale(1.05);
 }
-
 .card-img {
     transition: transform 0.4s ease-in-out;
 }
@@ -140,54 +241,35 @@ a {
     color: var(--eefrei-light);
     font-weight: 600;
 }
-
 .card-link:hover {
     color: var(--eefrei-blue);
 }
 
-/* -------------------------------------------------------------------------- */
-/* 5. FOOTER                                 */
-/* -------------------------------------------------------------------------- */
-
-footer {
-    background-color: var(--eefrei-blue);
-    color: white;
-    padding-top: 2rem;
-}
-
-footer a {
-    color: #93c5fd; /* blue-300 de Tailwind pour les liens clairs */
-    font-weight: 500;
-}
-
-footer a:hover {
-    color: white;
-}
-
 /* -------------------------------------------------------------------------
-   6. STYLE DU CHATBOT 
+   4. STYLE DU CHATBOT 
 --------------------------------------------------------------------------*/
 
+/* Conteneur principal fixé en bas à droite */
 #chatbot-widget {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    z-index: 9999;
+    z-index: 9999; /* Au-dessus de tout le reste */
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-end; /* Aligne la fenêtre et le bouton à droite */
     gap: 15px;
 }
 
+/* Le bouton rond (icône de bulle) */
 #chatbot-trigger {
-    /* Utilise une couleur d'accent différente, l'orange, si c'est votre intention pour le chatbot */
-    background-color: #FF9900; 
+    background-color: var(--eefrei-light); /* Couleur orange */
     color: white;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: none;
-    font-size: 28px;
+    font-size: 28px; /* Taille de l'emoji */
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s;
@@ -197,14 +279,11 @@ footer a:hover {
 }
 
 #chatbot-trigger:hover {
-    transform: scale(1.1);
-    background-color: #e68a00; 
+    transform: scale(1.1); /* Petit effet de grossissement au survol */
+    background-color: #e68a00; /* Orange un peu plus foncé */
 }
 
-#chatbot-widget .hidden {
-    display: none !important;
-}
-
+/* La fenêtre de discussion */
 #chat-window {
     background-color: white;
     width: 320px;
@@ -216,11 +295,19 @@ footer a:hover {
     overflow: hidden;
     border: 1px solid #e5e7eb;
     
+    /* Animation d'apparition */
     transform-origin: bottom right;
     transition: all 0.3s ease-in-out;
     opacity: 1;
     transform: scale(1);
 }
+
+/* Classe utilitaire pour cacher la fenêtre (gérée par le JS) */
+#chatbot-widget .hidden {
+    display: none !important;
+}
+
+/* --- Intérieur du Chatbot --- */
 
 .chat-header {
     background-color: var(--eefrei-blue);
@@ -269,7 +356,7 @@ footer a:hover {
 }
 
 .user-message {
-    background-color: var(--eefrei-light); /* Message utilisateur en bleu clair (Accent) */
+    background-color: var(--eefrei-light);
     color: white;
     align-self: flex-end;
     border-bottom-right-radius: 2px;
